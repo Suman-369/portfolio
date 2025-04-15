@@ -33,6 +33,14 @@ ScrollTrigger.refresh();
 
 
 
+let loader = document.getElementById("preloader")
+
+let load = window.addEventListener("load",()=>{
+  setTimeout(() => {
+    loader.style.display = "none";
+ }, 2000);
+})
+
 
 
 gsap.to("#nav svg", {
