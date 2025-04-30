@@ -32,16 +32,15 @@ ScrollTrigger.refresh();
 // rotating an arrow in navbar
 
 
+window.addEventListener("load", () => {
+  const loader = document.getElementById("preloader");
+  const whatsapp = document.getElementById("whatsapp-wrapper");
 
-let loader = document.getElementById("preloader")
-
-let load = window.addEventListener("load",()=>{
   setTimeout(() => {
-    loader.style.display = "none";
- }, 2000);
-})
-
-
+    if (loader) loader.style.display = "none";
+    if (whatsapp) whatsapp.style.display = "block";
+  }, 2000); // Adjust delay if needed
+});
 
 gsap.to("#nav svg", {
   rotate: 90,
@@ -214,3 +213,8 @@ document.addEventListener(
   },
   false
 )
+
+
+
+  
+

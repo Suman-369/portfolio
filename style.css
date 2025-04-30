@@ -69,14 +69,14 @@ body {
     padding: .9vmax 1.5vmax;
     border-radius: 5vmax;
     border: none;
-    color: #fff;
+    color:rgb(43, 42, 42);
     cursor: pointer;
     display: flex;
     align-items: center;
     box-shadow: 0 0 1vmax #FC626A;
-    background: linear-gradient(to right, #FE7D84, #FC626A);
+    background: #FFC0CC;
     box-shadow: 0 0 0.8vmax #49bff6;
-    background: linear-gradient(to right, #45d6e7, #38cdfa);
+    background: #FFC0CC;
     transition: 0.5s all;
     cursor: pointer;
 }
@@ -97,14 +97,14 @@ body {
     padding: .9vmax 1.5vmax;
     border-radius: 5vmax;
     border: none;
-    color: #fff;
+    color:rgb(43, 42, 42);
     cursor: pointer;
     display: flex;
     align-items: center;
     box-shadow: 0 0 1vmax #FC626A;
-    background: linear-gradient(to right, #FE7D84, #FC626A);
+    background: #FFC0CC;
     box-shadow: 0 0 0.8vmax #49bff6;
-    background: linear-gradient(to right, #45d6e7, #38cdfa);
+    background: #FFC0CC;
     transition: 0.5s all;
     cursor: pointer;
     display: none;
@@ -1114,3 +1114,21 @@ a {
     z-index: 100;
     background-size: cover;
 }
+
+
+.fixed-button {
+    position: fixed;
+    right: 15px;
+    bottom: 10px;
+    padding: 12px;  /* Equivalent to p-3 in Tailwind (0.75rem = 12px) */
+    z-index: 1000;
+}
+
+@media (max-width: 600px) {
+    .fixed-button img {
+        width: 50px; /* Adjusted image size for mobile screens */
+        background: transparent;
+    }
+}
+  
+
