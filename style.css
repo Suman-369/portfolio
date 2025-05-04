@@ -74,9 +74,9 @@ body {
     display: flex;
     align-items: center;
     box-shadow: 0 0 1vmax #FC626A;
-    background: #FFC0CC;
+    background: linear-gradient(to right, #fda4af, #fef2f2);
     box-shadow: 0 0 0.8vmax #49bff6;
-    background: #FFC0CC;
+    background: linear-gradient(to right, #fda4af, #fef2f2);
     transition: 0.5s all;
     cursor: pointer;
 }
@@ -102,9 +102,10 @@ body {
     display: flex;
     align-items: center;
     box-shadow: 0 0 1vmax #FC626A;
-    background: #FFC0CC;
+    background: linear-gradient(to right, #fda4af, #fef2f2);
     box-shadow: 0 0 0.8vmax #49bff6;
-    background: #FFC0CC;
+    background: linear-gradient(to right, #fda4af, #fef2f2);
+
     transition: 0.5s all;
     cursor: pointer;
     display: none;
