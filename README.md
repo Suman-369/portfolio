@@ -4,8 +4,8 @@ Welcome to my personal portfolio website! This project showcases who I am, the w
 
 ## 📌 Live Preview
 
-🔗 [View My Portfolio](https://your-portfolio-link.com)  
-*(Replace with your actual portfolio link)*
+🔗 [View My Portfolio]  
+
 
 ---
 

@@ -30,24 +30,14 @@ ScrollTrigger.refresh();
 
 // rotating an arrow in navbar
 
+let loader = document.getElementById("preloader")
 
-window.addEventListener("load", () => {
-    // Animate loader out
-    gsap.to("#loader", {
-        y: "-100%",
-        duration: 0.8,
-        delay: 2.75, // Adjusted for a smoother transition
-        ease: "power2.inOut",
-        onComplete: () => {
-            // Show whatsapp button when loader is gone
-            const whatsapp = document.getElementById("whatsapp-wrapper");
-            if (whatsapp) whatsapp.style.display = "block";
-        }
-    });
+let load = window.addEventListener("load",()=>{
+  setTimeout(() => {
+    loader.style.display = "none";
+ }, 2000);
+})
 
-    // Call the function to swap image on mobile
-    swapImageForMobile();
-});
 
 gsap.to("#nav svg", {
   rotate: 90,
