@@ -1,4 +1,3 @@
-
 gsap.registerPlugin(ScrollTrigger);
 
 // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
@@ -33,13 +32,21 @@ ScrollTrigger.refresh();
 
 
 window.addEventListener("load", () => {
-  const loader = document.getElementById("preloader");
-  const whatsapp = document.getElementById("whatsapp-wrapper");
+    // Animate loader out
+    gsap.to("#loader", {
+        y: "-100%",
+        duration: 0.8,
+        delay: 2.75, // Adjusted for a smoother transition
+        ease: "power2.inOut",
+        onComplete: () => {
+            // Show whatsapp button when loader is gone
+            const whatsapp = document.getElementById("whatsapp-wrapper");
+            if (whatsapp) whatsapp.style.display = "block";
+        }
+    });
 
-  setTimeout(() => {
-    if (loader) loader.style.display = "none";
-    if (whatsapp) whatsapp.style.display = "block";
-  }, 2000); // Adjust delay if needed
+    // Call the function to swap image on mobile
+    swapImageForMobile();
 });
 
 gsap.to("#nav svg", {
@@ -199,7 +206,6 @@ function swapImageForMobile() {
   }
 }
 
-window.addEventListener("load", swapImageForMobile);
 window.addEventListener("resize", swapImageForMobile);
 
 
