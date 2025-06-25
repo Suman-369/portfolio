@@ -1168,4 +1168,10 @@ a {
         background: transparent;
     }
 }
+
+@media (max-width: 600px) {
+    #loader h1 {
+        font-size: 10vw;
+    }
+}
   
