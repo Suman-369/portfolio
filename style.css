@@ -285,37 +285,36 @@ body {
 
 @media (max-width:600px) {
     #page1 {
-        min-height: 80vh;
+        min-height: 100vh;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         position: relative;
-        padding: 0 20px;
+        padding: 0 15px;
         text-align: center;
     }
 
     #page1 h1 {
-        font-size: 5vmax;
-        margin-bottom: 3vmax;
+        font-size: 4.5vmax;
+        margin-bottom: 2.5vmax;
         text-align: center;
         width: 100%;
+        line-height: 1.2;
     }
 
     #image-div {
-        height: 45vmax;
-        width: 70vw;
-        max-width: 280px;
+        height: 40vmax;
+        width: 65vw;
+        max-width: 250px;
         overflow: hidden;
-        margin: 0 auto 3vmax auto;
+        margin: 0 auto 2.5vmax auto;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 15px;
+        border-radius: 12px;
         position: relative;
-        left: 50%;
-        transform: translateX(-50%);
     }
 
     #image-div img {
@@ -323,9 +322,24 @@ body {
         object-position: center;
         height: 100%;
         width: 100%;
-        border-radius: 15px;
+        border-radius: 12px;
         display: block;
-        margin: 0 auto;
+        border: 3px solid transparent;
+        background: 
+            linear-gradient(#000, #000) padding-box,
+            linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(255, 165, 0, 0.5) 10%, 
+                rgba(255, 0, 0, 0.5) 20%, 
+                rgba(0, 255, 255, 0.5) 30%, 
+                rgba(0, 255, 0, 0.5) 40%, 
+                rgba(0, 255, 255, 0.5) 50%, 
+                rgba(255, 165, 0, 0.5) 60%, 
+                rgba(255, 0, 0, 0.5) 70%, 
+                transparent 100%
+            ) border-box;
+        background-size: 400% 100%;
+        animation: movingGlow 6s linear infinite;
     }
 }
 
