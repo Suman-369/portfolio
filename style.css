@@ -305,41 +305,27 @@ body {
     }
 
     #image-div {
-        height: 40vmax;
-        width: 65vw;
-        max-width: 250px;
-        overflow: hidden;
-        margin: 0 auto 2.5vmax auto;
+        width: 90vw;
+        max-width: 370px;
+        height: 54vw;
+        max-height: 370px;
+        margin: 0 auto 2.5vh auto;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 12px;
-        position: relative;
+        border-radius: 14px;
+        overflow: hidden;
+        background: #222;
     }
 
     #image-div img {
-        object-fit: cover;
-        object-position: center;
-        height: 100%;
         width: 100%;
-        border-radius: 12px;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 14px;
         display: block;
         border: 3px solid transparent;
-        background: 
-            linear-gradient(#000, #000) padding-box,
-            linear-gradient(90deg, 
-                transparent 0%, 
-                rgba(255, 165, 0, 0.5) 10%, 
-                rgba(255, 0, 0, 0.5) 20%, 
-                rgba(0, 255, 255, 0.5) 30%, 
-                rgba(0, 255, 0, 0.5) 40%, 
-                rgba(0, 255, 255, 0.5) 50%, 
-                rgba(255, 165, 0, 0.5) 60%, 
-                rgba(255, 0, 0, 0.5) 70%, 
-                transparent 100%
-            ) border-box;
-        background-size: 400% 100%;
-        animation: movingGlow 6s linear infinite;
+        margin: 0 auto;
     }
 }
 
@@ -461,13 +447,14 @@ body {
     }
 
     #name-div {
-        width: 100%;
-        white-space: nowrap;
-        position: relative;
+        width: 100vw;
         overflow-x: auto;
-        margin-bottom: 1vh;
-        /* background-color: red; */
         overflow-y: hidden;
+        white-space: nowrap;
+        margin: 2vh 0 2vh 0;
+        padding: 0 2vw;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
     }
 
     #name-div::-webkit-scrollbar {
@@ -475,10 +462,13 @@ body {
     }
 
     #name-div h1 {
-        font-size: 14.6vw;
-        /* background-color:yellow; */
-        margin-right: 2vw;
+        font-size: 11vw;
         display: inline-block;
+        margin-right: 3vw;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: #fff;
+        text-shadow: 0 2px 8px #00000044;
     }
 
 
