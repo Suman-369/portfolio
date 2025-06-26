@@ -32,12 +32,21 @@ ScrollTrigger.refresh();
 
 let loader = document.getElementById("preloader")
 
-let load = window.addEventListener("load",()=>{
-  setTimeout(() => {
-    loader.style.display = "none";
- }, 2000);
+// Improved preloader logic
+window.addEventListener("load", () => {
+  if (loader) {
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 2000);
+  }
 })
 
+// Fallback in case the loader element is not found
+document.addEventListener("DOMContentLoaded", () => {
+  if (!loader) {
+    loader = document.getElementById("preloader");
+  }
+})
 
 gsap.to("#nav svg", {
   rotate: 90,
