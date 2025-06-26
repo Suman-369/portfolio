@@ -237,7 +237,7 @@ function swapImageForMobile() {
   if (window.innerWidth <= 600) {
     heroImage.src = "suman.png";
   } else {
-    heroImage.src = "My_pic.jpg";
+    heroImage.src = "Sk.png";
   }
 }
 
@@ -250,14 +250,14 @@ window.addEventListener("resize", swapImageForMobile);
 
 //contextmenu
 
-document.addEventListener(
-  "contextmenu",
-  function (event) {
-    event.preventDefault();
-    alert("Oops !! Right-click is disabled on this page.");
-  },
-  false
-)
+// document.addEventListener(
+//   "contextmenu",
+//   function (event) {
+//     event.preventDefault();
+//     alert("Oops !! Right-click is disabled on this page.");
+//   },
+//   false
+// )
 
 
 
