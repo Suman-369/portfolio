@@ -30,23 +30,56 @@ ScrollTrigger.refresh();
 
 // rotating an arrow in navbar
 
-let loader = document.getElementById("preloader")
+let loader = null;
 
-// Improved preloader logic
-window.addEventListener("load", () => {
-  if (loader) {
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 2000);
-  }
-})
-
-// Fallback in case the loader element is not found
+// Initialize preloader when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
-  if (!loader) {
     loader = document.getElementById("preloader");
-  }
-})
+    
+    // Ensure preloader is visible initially
+    if (loader) {
+        loader.style.display = "flex";
+        loader.style.visibility = "visible";
+        loader.style.opacity = "1";
+    }
+});
+
+// Improved preloader logic with better mobile support
+window.addEventListener("load", () => {
+    if (loader) {
+        // Add a small delay to ensure everything is loaded
+        setTimeout(() => {
+            loader.style.opacity = "0";
+            loader.style.visibility = "hidden";
+            setTimeout(() => {
+                loader.style.display = "none";
+            }, 500);
+        }, 2000);
+    } else {
+        // Fallback: try to find loader again
+        loader = document.getElementById("preloader");
+        if (loader) {
+            setTimeout(() => {
+                loader.style.opacity = "0";
+                loader.style.visibility = "hidden";
+                setTimeout(() => {
+                    loader.style.display = "none";
+                }, 500);
+            }, 2000);
+        }
+    }
+});
+
+// Additional fallback for slow loading
+setTimeout(() => {
+    if (loader && loader.style.display !== "none") {
+        loader.style.opacity = "0";
+        loader.style.visibility = "hidden";
+        setTimeout(() => {
+            loader.style.display = "none";
+        }, 500);
+    }
+}, 5000);
 
 gsap.to("#nav svg", {
   rotate: 90,

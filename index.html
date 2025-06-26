@@ -14,7 +14,11 @@
 <body>
     
     <div id="preloader">
-        <img src="./Image/loading.gif" alt="Loading..." style="max-width: 200px; width: 30%; height: auto;">
+        <img src="./Image/loading.gif" alt="Loading..." onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="fallback-loader" style="display: none;">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
     </div>
 
     <div id="nav">

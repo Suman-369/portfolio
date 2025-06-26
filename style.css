@@ -1110,34 +1110,47 @@ a {
 #preloader{
     background:#FFFFFF; 
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     position: fixed;
-    z-index: 9999;
+    z-index: 99999;
     top: 0;
     left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 #preloader img {
-    max-width: 300px; /* Increased from 200px to 300px for desktop */
-    width: 40%; /* Increased from 30% to 40% for desktop */
+    max-width: 300px;
+    width: 40%;
     height: auto;
     display: block;
+    object-fit: contain;
 }
 
 @media (max-width: 600px) {
+    #preloader {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    
     #preloader img {
-        width: 85%; /* Increased from 70% to 85% for better mobile visibility */
-        max-width: 250px; /* Increased from 200px to 250px */
+        width: 85%;
+        max-width: 250px;
+        height: auto;
     }
 }
 
 @media (max-width: 480px) {
     #preloader img {
-        width: 90%; /* Increased from 80% to 90% for very small screens */
-        max-width: 220px; /* Increased from 180px to 220px */
+        width: 90%;
+        max-width: 220px;
     }
 }
 
@@ -1153,6 +1166,48 @@ a {
     .fixed-button img {
         width: 50px; /* Adjusted image size for mobile screens */
         background: transparent;
+    }
+}
+
+/* Fallback loader styles */
+.fallback-loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.fallback-loader p {
+    color: #333;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+    .fallback-loader p {
+        font-size: 16px;
+    }
+    
+    .spinner {
+        width: 40px;
+        height: 40px;
+        border-width: 3px;
     }
 }
 
