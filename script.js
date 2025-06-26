@@ -195,7 +195,7 @@ function swapImageForMobile() {
   if (window.innerWidth <= 600) {
     heroImage.src = "suman.png";
   } else {
-    heroImage.src = "My_pic.png";
+    heroImage.src = "My_pic.jpg";
   }
 }
 
