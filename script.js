@@ -191,11 +191,18 @@ showcases.forEach(showcase => {
 
 //mobile devices image swap
 function swapImageForMobile() {
+  const heroImage = document.getElementById("hero-image");
   if (window.innerWidth <= 600) {
-    document.getElementById("hero-image").src = "My_pic.png";
+    heroImage.src = "suman.png";
+  } else {
+    heroImage.src = "My_pic.png";
   }
 }
 
+// Call the function on initial load
+swapImageForMobile();
+
+// Also call on resize
 window.addEventListener("resize", swapImageForMobile);
 
 

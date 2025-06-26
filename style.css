@@ -1108,7 +1108,7 @@ a {
 
 
 #preloader{
-    background:black url("pre") no-repeat center center; 
+    background:#FFFFFF url("/Image/loading.gif") no-repeat center center; 
     height: 100vh;
     width: 100%;
     position: fixed;
@@ -1117,6 +1117,11 @@ a {
     
 }
 
+@media (max-width: 600px) {
+    #preloader {
+        background-size: 70%; /* Increased from 30% to 60% for mobile */
+    }
+}
 
 .fixed-button {
     position: fixed;
