@@ -285,40 +285,48 @@ body {
 
 @media (max-width:600px) {
     #page1 {
-        min-height: 73vh;
+        min-height: 80vh;
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: center;
         flex-direction: column;
-        /* background-color: red; */
         position: relative;
+        padding: 0 20px;
+        text-align: center;
     }
 
     #page1 h1 {
-        font-size: 4.6vmax;
-        margin-bottom: 2.5vmax;
-    }
-
-    #image-div {
-        height: 45vmax;
-        width: 75vw;
-        /* border-radius: 50%; */
-        /* background-color: red; */
-        overflow: hidden;
-        margin-bottom: 2vmax;
-        /* width: 78vw; */
-        /* clip-path: ellipse(40% 50% at 50% 50%); */
-    }
-
-    #image-div img {
-
-        object-fit: cover;
-        object-position: bottom;
-        height: 100%;
+        font-size: 5vmax;
+        margin-bottom: 3vmax;
+        text-align: center;
         width: 100%;
     }
 
+    #image-div {
+        height: 55vmax;
+        width: 85vw;
+        max-width: 350px;
+        overflow: hidden;
+        margin: 0 auto 3vmax auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #image-div img {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 
@@ -1158,7 +1166,7 @@ a {
     position: fixed;
     right: 15px;
     bottom: 10px;
-    padding: 12px;  /* Equivalent to p-3 in Tailwind (0.75rem = 12px) */
+    padding: 12px;  
     z-index: 1000;
 }
 
