@@ -304,9 +304,9 @@ body {
     }
 
     #image-div {
-        height: 55vmax;
-        width: 85vw;
-        max-width: 350px;
+        height: 45vmax;
+        width: 70vw;
+        max-width: 280px;
         overflow: hidden;
         margin: 0 auto 3vmax auto;
         display: flex;
