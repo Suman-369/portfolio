@@ -5,7 +5,7 @@ Welcome to my personal portfolio website! This project showcases who I am, the w
 ## 📌 Live Preview
 
 🔗 [View My Portfolio]  
- view :- https://suman-369.github.io/portfolio/
+Live view :- https://suman-369.github.io/portfolio/
 
 ---
 
