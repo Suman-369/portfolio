@@ -237,7 +237,7 @@ function swapImageForMobile() {
   if (window.innerWidth <= 600) {
     heroImage.src = "suman.png";
   } else {
-    heroImage.src = "Sk.png";
+    heroImage.src = "SUMANKAR.jpg";
   }
 }
 
