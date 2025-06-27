@@ -235,7 +235,7 @@ showcases.forEach(showcase => {
 function swapImageForMobile() {
   const heroImage = document.getElementById("hero-image");
   if (window.innerWidth <= 600) {
-    heroImage.src = "suman.png";
+    heroImage.src = "My_pic.png";
   } else {
     heroImage.src = "SUMANKAR.jpg";
   }
