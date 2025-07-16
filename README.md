@@ -24,5 +24,5 @@ Live view :- https://suman-369.github.io/portfolio/
 ## 🛠️ Tech Stack
 
 - **Frontend:** HTML5, CSS3, JavaScript
-- **UI Frameworks:** TailwindCSS / Bootstrap (if used)
-- **Animations:** GSAP / ScrollReveal /
+- **UI Frameworks:** Raw CSS / Html 5
+- **Animations:** GSAP / Scrolltrigger / Locomotive js
